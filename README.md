@@ -1,2 +1,4 @@
 # Kaggle_Quora
-Rank: 696/3396 (Top 21%)
+Final Rank: 660/3307 (Top 20%) with LSTM 
+            552/3307 (Top 16%) with CNN (this is a implementation of others' architecture)
+
