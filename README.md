@@ -7,9 +7,9 @@ There are two general ways to approach these problems: <br>
 1. Build handcraft features from the text and model them with xgboost and ensemble.<br>
 2. Embed the text to distributed representation vectors and develop deep learning model (RNN or CNN) and ensemble <br>
 
-During this competition, I first tried the method 1, which gives me results within 0.33 to 0.35. Then, I get away and <br>
-embark on learning some deep learning methods and get back. I start to build Siamese Recurrent Architecture and make some <br>
-change on it. Then, after the finish of this competition, I also implement a CNN architecture proposed by other kagglers, <br>
+During this competition, I first tried the method 1, which gives me results within 0.33 to 0.35. Then, I get away and
+embark on learning some deep learning methods and get back. I start to build Siamese Recurrent Architecture and make some
+change on it. Then, after the finish of this competition, I also implement a CNN architecture proposed by other kagglers,
 which gives a great improvement on the accuracy.<br>
 
 Most kagglers are using a kind of magic features which will improve the accuracy a lot <br>
