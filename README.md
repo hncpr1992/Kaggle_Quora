@@ -24,3 +24,4 @@ Final Rank:  <br>
 660/3307 (Top 20%) with LSTM. This rank is on the leader board <br>
 552/3307 (Top 16%) with CNN. This rank is not on leader board (this is a implementation of others' architecture, ***Great thanks***)
 
+Both codes include ideas from other kagglers. I learned a lot.
