@@ -27,3 +27,6 @@ https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/RNN_Keras.ipynb<br>
 https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/CNN_Keras.py<br>
 
 Both codes include ideas from other kagglers. I learned a lot.
+
+Private Leader Board 660<br>
+https://www.kaggle.com/c/quora-question-pairs/leaderboard
