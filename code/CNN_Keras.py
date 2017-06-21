@@ -1,6 +1,3 @@
-# The code is modified from https://www.kaggle.com/lystdo/lb-0-18-lstm-with-glove-and-magic-features
-# Great Appreciation
-
 #########################################
 # import packages
 import os
@@ -344,14 +341,6 @@ magic_input = Input(shape=(leaks.shape[1],))
 magic_dense = BatchNormalization()(magic_input)
 magic_dense = Dense(64, activation='relu')(magic_dense)
 
-# Add the distance features (these are now TFIDF (character and word), Fuzzy matching, 
-# nb char 1 and 2, word mover distance and skew/kurtosis of the sentence vector)
-# distance_input = Input(shape=(20,))
-# distance_dense = BatchNormalization()(distance_input)
-# distance_dense = Dense(128, activation='relu')(distance_dense)
-
-# Merge the Magic and distance features with the difference layer
-# merge = concatenate([diff, mul, magic_dense, distance_dense])
 merge = concatenate([diff, mul, magic_dense])
 
 # The MLP that determines the outcome
