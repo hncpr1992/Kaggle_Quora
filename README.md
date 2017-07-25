@@ -23,7 +23,7 @@ https://www.kaggle.com/rethfro/1d-cnn-single-model-score-0-14-0-16-or-0-23<br>
 Final Rank:  <br>
 660/3307 (Top 20%) with LSTM. This rank is on the leader board <br>
 https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/RNN_Keras.ipynb<br>
-552/3307 (Top 16%) with CNN. This rank is not on leader board (this is a implementation of others' architecture, ***Great thanks***)<br>
+552/3307 (Top 16%) with CNN. This rank is not on leader board because it is submitted after the deadline of the competition.<br>
 https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/CNN_Keras.py<br>
 
 Both codes include ideas from other kagglers. I learned a lot.
