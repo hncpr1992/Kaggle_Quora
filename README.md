@@ -1,11 +1,12 @@
 # Kaggle_Quora
 
-The Quora Question Pairs Kaggle competition requires the kagglers to give accurate evaluation on whether the two <br>
-queries as a pair refer to the same topic of questions or not.
+## Introduction
+The Quora Question Pairs Kaggle competition requires the kagglers to give accurate evaluation on whether the two 
+queries as a pair refer to the same topic of questions or not.<br>
 
 There are two general ways to approach these problems: <br>
 1. Build handcraft features from the text and model them with xgboost and ensemble.<br>
-2. Embed the text to distributed representation vectors and develop deep learning model (RNN or CNN) and ensemble <br>
+2. Embedded the text to distributed representation vectors and develop deep learning model (RNN or CNN) and ensemble <br>
 
 During this competition, I first tried the method 1, which gives me results within 0.33 to 0.35. Then, I get away and
 embark on learning some deep learning methods and get back. I start to build Siamese Recurrent Architecture and make some
@@ -23,7 +24,7 @@ https://www.kaggle.com/rethfro/1d-cnn-single-model-score-0-14-0-16-or-0-23<br>
 Final Rank:  <br>
 660/3307 (Top 20%) with LSTM. This rank is on the leader board <br>
 https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/RNN_Keras.ipynb<br>
-552/3307 (Top 16%) with CNN. This rank is not on leader board because it is submitted after the deadline of the competition.<br>
+552/3307 (Top 16%) with CNN. This rank is ***not*** on leader board because it is submitted after the deadline of the competition. ***This structure was first proposed by other kagglers*** <br>
 https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/CNN_Keras.py<br>
 
 Both codes include ideas from other kagglers. I learned a lot.
