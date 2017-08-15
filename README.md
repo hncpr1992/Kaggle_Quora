@@ -21,7 +21,7 @@ https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/RNN_Keras.ipynb<br>
 552/3307 (Top 16%) with CNN. This rank is ***not*** on leader board because it is submitted after the deadline of the competition. ***This structure was first proposed by other kagglers*** <br>
 https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/CNN_Keras.py<br>
 
-Both codes include ideas from other kagglers. I learned a lot.
+The code include ideas from other kagglers. I learned a lot.
 
 Private Leader Board 660<br>
 https://www.kaggle.com/c/quora-question-pairs/leaderboard
