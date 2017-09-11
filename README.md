@@ -9,13 +9,13 @@ https://www.kaggle.com/c/quora-question-pairs<br>
 The first model is based on a Siamese Network Structure for classifying text similarity from <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwiqkPDo-J3WAhUJ64MKHZyBBvcQFggzMAE&url=https%3A%2F%2Fwww.aaai.org%2Focs%2Findex.php%2FAAAI%2FAAAI16%2Fpaper%2Fdownload%2F12195%2F12023&usg=AFQjCNEDeIU50_crbvc_VrK5qFfZAMS64A">Siamese Recurrent Architectures for Learning Sentence Similarity</a>
 
 The model structure is like:
-<img href="siamese_img.jpeg">
+<img src="siamese_img.jpeg">
 
 The top exponetial transformation was replaced with a multiple-layer neural network<br>
 The text sentence was first embedding with the Glove pretrained word embedding. Then I fed each two question sentence into a the same LSTM layer. Next, the two vector outputs from the LSTM are concatenated into one vector, combined with a vector of handcrafted features were fed into fully connected layers to produce the final classification result.
 The visualization of the model structure is:
 
-<img href="model_1_img.jpeg">
+<img src="model_1_img.jpeg">
 
 ## Model 1 evaluation
 1. Data
@@ -38,7 +38,7 @@ Accuracy on dev set: 88%
 Reference: http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/<br>
 Model structure looks like:
 
-<img href="CNN_img.png">
+<img src="CNN_img.png">
 
 ## Model 2 evaluation 
 The embedding and data used are the same as the model above.<br>
