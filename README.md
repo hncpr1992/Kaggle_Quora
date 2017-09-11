@@ -1,33 +1,57 @@
 # Kaggle_Quora
 
-## Background
-The Quora Question Pairs Kaggle competition requires the kagglers to give accurate evaluation on whether the two 
-queries as a pair refer to the same topic of questions or not.<br>
+## Target
+Developed deep learning models in Keras to addresses the Quora Question Pairs.<br>
+https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs<br>
+https://www.kaggle.com/c/quora-question-pairs<br>
 
-There are two general ways to approach these problems: <br>
-1. Build handcraft features from the text and model them with xgboost and ensemble.<br>
-2. Embedded the text to distributed representation vectors and develop deep learning model (RNN or CNN) and ensemble <br>
+## Model structure - Siamese Network
+The first model is based on a Siamese Network Structure for classifying text similarity from <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwiqkPDo-J3WAhUJ64MKHZyBBvcQFggzMAE&url=https%3A%2F%2Fwww.aaai.org%2Focs%2Findex.php%2FAAAI%2FAAAI16%2Fpaper%2Fdownload%2F12195%2F12023&usg=AFQjCNEDeIU50_crbvc_VrK5qFfZAMS64A">Siamese Recurrent Architectures for Learning Sentence Similarity</a>
 
-During this competition, I first tried the method 1, which gives me results within 0.33 to 0.35. Then, I get away and
-embark on learning some deep learning methods and get back. I start to build Siamese Recurrent Architecture and make some
-change on it. Then, after the finish of this competition, I also implement a CNN architecture proposed by other kagglers,
-which gives a great improvement on the accuracy.<br>
-Most kagglers are using a kind of magic features which will improve the accuracy a lot <br>
+The model structure is like:
+<img href="siamese_img.jpeg">
 
-## Results
-Final Rank:  <br>
-660/3307 (Top 20%) with LSTM. This rank is on the leader board <br>
-https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/RNN_Keras.ipynb<br>
-552/3307 (Top 16%) with CNN. This rank is ***not*** on leader board because it is submitted after the deadline of the competition. ***This structure was first proposed by other kagglers*** <br>
-https://github.com/hncpr1992/Kaggle_Quora/blob/master/code/CNN_Keras.py<br>
+The top exponetial transformation was replaced with a multiple-layer neural network<br>
+The text sentence was first embedding with the Glove pretrained word embedding. Then I fed each two question sentence into a the same LSTM layer. Next, the two vector outputs from the LSTM are concatenated into one vector, combined with a vector of handcrafted features were fed into fully connected layers to produce the final classification result.
+The visualization of the model structure is:
 
-The code include ideas from other kagglers. I learned a lot.
+<img href="model_1_img.jpeg">
 
-Private Leader Board 660<br>
-https://www.kaggle.com/c/quora-question-pairs/leaderboard
+## Model 1 evaluation
+1. Data
+The train data is split into (90% train set/10% dev set), the model is trained on the trains set and tuned on the dev set.
+
+2. Framework
+Keras(Tensorflow backend) for on paperspace.com with 
+
+3. Pretrained word embedding
+The pretrained embedding model is Common Crawl (840B tokens, 300 dimension)
+https://nlp.stanford.edu/projects/glove/
+
+4. Best model performance
+On Kaggle private leader board<br>
+Loss: 0.17978
+Rank: 660/3307(20%)
+Accuracy on dev set: 88%
+
+## Model Structure - 1D CNN with global average pooling
+Reference: http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/<br>
+Model structure looks like:
+<img href="CNN_img.png">
+
+## Model 2 evaluation 
+The embedding and data used are the same as the model above.<br>
+Best model performance(The model was submitted after the competition, so the results is not recorded on leader board)
+On Kaggle private leader board<br>
+Loss: 0.17028
+Rank: 552/3307(16%)
+Accuracy on dev set: 89%
 
 ## Reference
 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&ved=0ahUKEwickJT52c_UAhVJ2IMKHdRXCuYQFgg6MAQ&url=https%3A%2F%2Fwww.cs.cmu.edu%2F~rsalakhu%2Fpapers%2Foneshot1.pdf&usg=AFQjCNEFB93X4PyZIriYa-iee1lL7250gQ&sig2=AExXqidnx0TpFyO1lb8dPA">Learning Sentence Similarity with Siamese Recurrent Architectures</a><br>
 https://engineering.quora.com/Semantic-Question-Matching-with-Deep-Learning <br>
 http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/<br>
 https://www.kaggle.com/rethfro/1d-cnn-single-model-score-0-14-0-16-or-0-23<br>
+http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/
+
+
