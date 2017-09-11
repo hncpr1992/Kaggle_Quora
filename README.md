@@ -37,6 +37,7 @@ Accuracy on dev set: 88%
 ## Model Structure - 1D CNN with global average pooling
 Reference: http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/<br>
 Model structure looks like:
+
 <img href="CNN_img.png">
 
 ## Model 2 evaluation 
