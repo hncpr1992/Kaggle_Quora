@@ -15,7 +15,7 @@ The top exponetial transformation was replaced with a multiple-layer neural netw
 The text sentence was first embedding with the Glove pretrained word embedding. Then I fed each embedded question sentence into the same LSTM layer. Next, the two vector outputs from the LSTM are concatenated into one vector, combined with a vector of handcrafted features were fed into fully connected layers to produce the final classification result.
 The visualization of the model structure is:
 
-<img src="model_1_img.jpeg">
+<img src="model_1_img.png">
 
 ## Model evaluation
 1. Data
