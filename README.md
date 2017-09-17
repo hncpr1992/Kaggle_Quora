@@ -58,7 +58,7 @@ sentence word length<br>
 sentence character length<br>
 sentence word length difference<br>
 sentence character length difference<br>
-Tf-IDF(sum, mean)<br>
+Tf-IDF(sum, mean, cosine distance)<br>
 
 ## Reference
 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&ved=0ahUKEwickJT52c_UAhVJ2IMKHdRXCuYQFgg6MAQ&url=https%3A%2F%2Fwww.cs.cmu.edu%2F~rsalakhu%2Fpapers%2Foneshot1.pdf&usg=AFQjCNEFB93X4PyZIriYa-iee1lL7250gQ&sig2=AExXqidnx0TpFyO1lb8dPA">Learning Sentence Similarity with Siamese Recurrent Architectures</a><br>
